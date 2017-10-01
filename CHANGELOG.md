@@ -7,3 +7,7 @@
 ## 0.0.2
 
 - Minor update to sample code
+
+## 0.0.3
+
+- Add an usage example the the README
