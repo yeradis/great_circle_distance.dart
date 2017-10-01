@@ -14,5 +14,5 @@ main() {
 
     print('Distance from location 1 to 2 using the Haversine formula is: ${gcd.haversineDistance()}');
     print('Distance from location 1 to 2 using the Spherical Law of Cosines is: ${gcd.sphericalLawOfCosinesDistance()}');
-    print('Distance from location 1 to 2 using the Vicenty`s formula is: ${gcd.sphericalLawOfCosinesDistance()}');
+    print('Distance from location 1 to 2 using the Vicenty`s formula is: ${gcd.vincentyDistance()}');
 }
