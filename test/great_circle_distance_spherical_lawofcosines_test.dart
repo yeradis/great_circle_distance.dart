@@ -38,7 +38,8 @@ void main() {
         });
 
         test('Distance from location1 to location2 should be around 8.54', () {
-            expect(gcd.sphericalLawOfCosinesDistance(), inInclusiveRange(8.5394, 8.54));
+            expect(gcd.sphericalLawOfCosinesDistance(), greaterThan(8.5394));
+            expect(gcd.sphericalLawOfCosinesDistance(), lessThan(8.55));
         });
 
         test('Distance from location1 to location2 should greather than 8', () {
