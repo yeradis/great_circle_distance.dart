@@ -15,3 +15,7 @@
 ## 0.0.5
 
 - Update descriptions
+
+## 0.0.6
+
+- Minor test update, added travis integration
