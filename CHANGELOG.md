@@ -12,6 +12,6 @@
 
 - Add an usage example the the README
 
-## 0.0.4
+## 0.0.5
 
 - Update descriptions
