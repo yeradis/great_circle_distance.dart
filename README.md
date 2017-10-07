@@ -1,8 +1,12 @@
 # Great-circle distance
 
-Calculate the great-circle distance on the Earth having a pair of Latitude/Longitude points
+Calculate the great-circle distance between two points (having Latitude,Longitude) on the surface of Earth 
+You can get the distance using the Spherical law of cosines, Haversine formula or Vincenty`s formula  
 
-The *great-circle distance* is the shortest distance between two points on the surface of a sphere, measured along the surface of the sphere (as opposed to a straight line through the sphere's interior)
+The [great-circle distance][3] is the shortest distance between two points on the surface of a sphere
+
+![Great-circle distance (drawn in red) between two points on a sphere][great_circle_distance]
+> A diagram illustrating great-circle distance (drawn in red) between two points on a sphere, P and Q. Two antipodal points, u and v, are also depicted. <br><br> By CheCheDaWaff (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons
 
 Included in this library:
 
@@ -33,3 +37,4 @@ Check Wikipedia for detailed description on [Great-circle distance][3]
 [1]: https://gis.stackexchange.com/questions/25494/how-accurate-is-approximating-the-earth-as-a-sphere#25580
 [2]: https://en.wikipedia.org/wiki/Great-circle_distance#cite_note-1
 [3]: https://en.wikipedia.org/wiki/Great-circle_distance
+[great_circle_distance]: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Illustration_of_great-circle_distance.svg/500px-Illustration_of_great-circle_distance.svg.png
