@@ -1,6 +1,6 @@
 name: great_circle_distance
-description: Calculate the great-circle distance on the Earth having a pair of Latitude/Longitude points.
-version: 0.0.3
+description: Calculate the great-circle distance on the Earth having a pair of Latitude,Longitude points using the Spherical law of cosines, Haversine formula or Vincenty`s formula
+version: 0.0.4
 homepage: https://www.yeradis.com
 author: Yeradis P. Barbosa Marrero <yeradis@gmail.com>
 
