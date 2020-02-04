@@ -58,7 +58,7 @@ class GreatCircleDistance {
         return Vincenty.distance(this.latitude1, this.longitude1, this.latitude2, this.longitude2);
     }
 
-    double _radiansFromDegrees(final double degrees) => degrees * (PI / 180.0);
+    double _radiansFromDegrees(final double degrees) => degrees * (pi / 180.0);
 
     /// A coordinate is considered invalid if it meets at least one of the following criteria:
     ///
