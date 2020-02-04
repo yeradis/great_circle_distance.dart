@@ -1,0 +1,46 @@
+name: Great-circle distance CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get install lcov
+        pub get
+        
+    - name: Run tests
+      run: pub run test -r expanded test/test_all.dart
+      
+  release:
+    
+    if: ${{ github.ref == 'master' }}
+    needs: build
+    runs-on: [ubuntu-latest]
+    
+    steps:
+      - name: Activate Coverage tools
+        run: |
+          pub global activate coverage
+          pub global activate coveralls
+      - name: Run tests to gather coverage
+        run: |
+          dart --pause-isolates-on-exit --enable-vm-service=8111 test/test_all.dart &
+          sleep 1
+          pub global run coverage:collect_coverage --port=8111/ -o coverage.json --resume-isolates
+          pub global run coverage:format_coverage --packages=.packages -i coverage.json -o coverage.lcov --lcov --report-on=lib/
+      - name: Upload coverage reports
+        run: |
+          pub global run coveralls coverage.lcov
+          bash <(curl -s https://codecov.io/bash)          
+
+        
