@@ -23,7 +23,6 @@ jobs:
       
   release:
     
-    if: ${{ github.ref == 'master' }}
     needs: build
     runs-on: [ubuntu-latest]
     
