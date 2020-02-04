@@ -22,13 +22,21 @@ jobs:
   release:
     
     needs: build
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     
+    container:
+      image:  google/dart:latest
+      
     steps:
+      - name: Install dependencies
+        run: |
+          pub get
+        
       - name: Activate Coverage tools
         run: |
           pub global activate coverage
           pub global activate coveralls
+          
       - name: Run tests to gather coverage
         run: |
           dart --pause-isolates-on-exit --enable-vm-service=8111 test/test_all.dart &
