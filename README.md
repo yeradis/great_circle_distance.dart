@@ -1,4 +1,6 @@
-# Great-circle distance [![Pub][pub_version]](../../) ![Travis status][travis_status] [![Coverage Status][coverage_status]][coverage_page]
+# Great Circle Distance [![Pub][pub_version]](../../) ![Travis status][travis_status] [![Coverage Status][coverage_status]][coverage_page]
+
+**Updated to work with Flutter 1.9 and Dart 2.5**
 
 Calculate the great-circle distance between two points (having Latitude,Longitude) on the surface of Earth 
 You can get the distance using the Spherical law of cosines, Haversine formula or Vincenty`s formula  
